@@ -7,6 +7,7 @@ const Character = require("../models/Characters");
 
 router.get("/characters", async (req, res) => {
   try {
+    console.log(req.query);
     const response = await axios.get(
       `https://lereacteur-marvel-api.herokuapp.com/characters?apiKey=${process.env.apiKey}`
     );
